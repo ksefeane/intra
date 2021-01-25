@@ -38,8 +38,11 @@ async function reader(file) {
 				console.log('projects: ')
 				for (let i in p) {
 					if (p[i].marked === true && p[i].final_mark > 0) {
-							var m = p[i].final_mark.toString()
-						console.log("\x1b[34m", p[i].project.name, "\x1b[32m", m, "\x1b[0m");
+						var e = '🔴';
+						if (p[i].final_mark > 75)
+					  		e = '🟢';
+						var m = p[i].final_mark.toString()
+						console.log("\x1b[34m", p[i].project.name, "\x1b[32m", m, e, "\x1b[0m");
 					}
 				}
 				yes('to exit press CTRL C or enter \'exit\'');
