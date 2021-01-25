@@ -1,5 +1,5 @@
 # intra
-a simple node.js script to filter intra results (for wtc students)
+a simple node.js script to view intra results (for wtc students)
 
 instructions
 ============
